@@ -288,7 +288,7 @@ class ViewController: UIViewController {
         }
         //O jogador tem 2 jogadas seguidas
         if let result = rowCheck(value: 1) {
-            var aondeJogarResultado = aondeJogar(result[0], pattern: result[1])
+            var aondeJogarResultado = aiJogada(result[0], pattern: result[1])
             if !estaOcupado(aondeJogarResultado) {
                 setImagemParaPosicao(aondeJogarResultado, player: .ComputadorJogador)
                 aiPensando = false
