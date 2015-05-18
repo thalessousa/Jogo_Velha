@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         println(pronto)
         
         if jogadas[imageViewTapped.tag] == nil && !aiPensando && !pronto {
-            setImagemParaPosicao(imageViewTapped.tag, player:.UserPlayer)
+            setPosicaoImagem(imageViewTapped.tag, player:.UserPlayer)
         }
         
         checarVitoria()
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetBtnClicked(sender : UIButton) {
-        done = false
+        pronto = false
         resetBtn.hidden = true
         userMessage.hidden = true
         reset()
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
                     userMessage.hidden = false
                     userMessage.text = "Parece que o \(key) venceu!"
                     resetBtn.hidden = false;
-                    done = true;
+                    pronto = true;
             }
         }
     }
