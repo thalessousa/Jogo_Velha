@@ -181,7 +181,7 @@ class ViewController: UIViewController {
         return false
     }
     
-    func aiJogada(location:String,pattern:String) -> Int {
+    func aiJogada(lugar:String,pattern:String) -> Int {
         var padraoEsquerdo = "011"
         var padraoDireito = "110"
         var padraoMeio = "101"
